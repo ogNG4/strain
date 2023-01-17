@@ -23,6 +23,7 @@ playBtn.addEventListener('click', () => {
 
 seek.addEventListener('input' , () =>{
     strain.currentTime = strain.duration * (seek.value/100);
+    
 })
 
 
