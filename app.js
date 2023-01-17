@@ -36,5 +36,11 @@ strain.addEventListener("timeupdate", () => {
     seek.value = strain.currentTime / strain.duration * 100;
     const currentMinutes = Math.floor(strain.currentTime / 60);
     const currentSeconds = Math.floor(strain.currentTime % 60);
-    currentTime.innerHTML = `${currentMinutes}:${currentSeconds}`;
+    
+
+    if(currentSeconds < 10){
+        currentTime.innerHTML = `${currentMinutes}:0${currentSeconds}`;
+    }else{
+        currentTime.innerHTML = `${currentMinutes}:${currentSeconds}`;
+    }
 });
